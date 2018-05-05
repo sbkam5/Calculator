@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         buttonSubtract = (Button) findViewById(R.id.button12);
         buttonDecimal = (Button) findViewById(R.id.button18);
         buttonPercent = (Button) findViewById(R.id.button3);
+        startP = (Button) findViewById(R.id.button20);
+        endP = (Button) findViewById(R.id.button21);
 
         //when user clicks on equal, it will pass the string in text editor to calc method
         buttonEqual.setOnClickListener(new View.OnClickListener() {
@@ -348,6 +350,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        startP.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(starting){
+                    edt1.setText("( ");  //if app is just starting out, you can replace current text.
+                }
+                else {
+                    edt1.setText(edt1.getText() + "( ");
+                }
+                backSpace = false;  //never backspace after a parenthesis. It should always have a separator after it.
+                starting = false;
+            }
+        });
+
+        endP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(starting){
+                    edt1.setText(") ");  //if app is just starting out, you can replace current text.
+                }
+                else {
+                    edt1.setText(edt1.getText() + ") ");
+                }
+                backSpace = false;  //never backspace after a parenthesis. It should always have a separator after it.
+                starting = false;
+            }
+        });
 
     }
 

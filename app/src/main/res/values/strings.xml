@@ -19,4 +19,6 @@
     <string name="Subtract">-</string>
     <string name="Decimal">.</string>
     <string name="Equals">=</string>
+    <string name="P_start">(</string>
+    <string name="P_end">)</string>
 </resources>
