@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //link declred variables to the buttons and text editor
+        //link declared variables to the buttons and text editor
         buttonEqual = (Button) findViewById(R.id.button19);
         edt1 = (EditText) findViewById(R.id.editText);
         button0 = (Button) findViewById(R.id.button17);
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 if(starting){
-                    edt1.setText("0 ");  //if the app is atrting out, you can directly input number
+                    edt1.setText("0 ");  //if the app is starting out, you can directly input number
                 }
                 else if(!backSpace) {
                     edt1.setText(edt1.getText() + "0 ");  //if backspace is not true, just add in the number
